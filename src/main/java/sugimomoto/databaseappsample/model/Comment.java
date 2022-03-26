@@ -8,12 +8,13 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
-public class Book {
-
+public class Comment {
+    
     @Id
     @GeneratedValue
     private Long id;
 
-    private String title;
-    private String detail;
+    @NotBlank
+    @Size(max = 40)
+    private String content;
 }
